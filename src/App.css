@@ -1,5 +1,52 @@
+body {
+  background: black;
+}
+
+.loader {
+  color: white;
+}
+
 .App {
   text-align: center;
+  color: #000;
+}
+
+.playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+.hero > p {
+  margin: 0;
+  color: rgb(0, 68, 255);
+}
+
+.cutive-mono {
+  font-family: Cutive Mono;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.loading {
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  font-weight: bold;
+}
+
+.App-hero {
+  position: relative;
+  z-index: 1;
+  padding: 0 20px;
+  max-width: 310px;
+  display: flex;
+  min-height: 100vh;
+  align-items: flex-start;
+  color: #ff0000;
+}
+
+.App-hero p {
+  font-size: 14px;
 }
 
 .App-logo {
@@ -8,19 +55,18 @@
   pointer-events: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
 .App-link {
   color: #61dafb;
+}
+
+.vis {
+  position: fixed;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
 }
 
 @keyframes App-logo-spin {

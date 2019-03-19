@@ -1,28 +1,35 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
+import Vis from './Background'
 import './App.css';
 
-class App extends Component {
-  render() {
-    return (
+function App () {
+  const [loading, setLoading] = useState(true)
+  
+  //TODO show a loader
+  useEffect(() => {
+    setTimeout(setLoading(false), 1000)
+  }, [])
+
+  return loading ?
+      <div className="loader">Loading</div> :
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Vis/>
+        <div className="App-hero">
+          <div className="cutive-mono align-left">
+            <p>Hi, I'm Inacio!</p>
+            <p>I work and freelance as software engineer and game developer.</p>
+            <p>Recently I placed 4th on Alakajam, a game jam, with "Cast Die Repeat".</p>
+          </div>       
+        </div>
+        <div className="App-hero">
+          <div className="cutive-mono align-left">
+            <p>Hi, I'm Inacio!</p>
+            <p>I work and freelance as software engineer and game developer.</p>
+            <p>Recently I placed 4th on Alakajam, a game jam, with "Cast Die Repeat".</p>
+          </div>       
+        </div>
       </div>
-    );
-  }
+     
 }
 
 export default App;
