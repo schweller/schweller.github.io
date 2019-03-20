@@ -1,24 +1,8 @@
 import React from 'react';
 import * as THREE from 'three'
+import { vertexShader, fragmentShader } from '../shaders'
 
-const vertexShader = ` 
-			attribute float scale;
-			void main() {
-				vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
-				gl_PointSize = scale * ( 300.0 / - mvPosition.z );
-				gl_Position = projectionMatrix * mvPosition;
-			}
-`
-
-const fragmentShader = `
-			uniform vec3 color;
-			void main() {
-				if ( length( gl_PointCoord - vec2( 0.5, 0.5 ) ) > 0.475 ) discard;
-				gl_FragColor = vec4( color, 1.0 );
-			}
-`
-
-const Vis = () => {
+const Particles = () => {
   let count=0
   const { useRef, useEffect, useState } = React
   const mount = useRef(null)
@@ -36,7 +20,7 @@ const Vis = () => {
     const scene = new THREE.Scene()
     const camera = new THREE.PerspectiveCamera(75, width / height, 1, 10000)
     camera.position.y = 1000
-    camera.position.z = 1000
+    camera.position.z = 100
     
     const numParticles = AMOUNTX * AMOUNTY
     var positions = new Float32Array( numParticles * 3 )
@@ -56,8 +40,9 @@ const Vis = () => {
     const geometry = new THREE.BufferGeometry();
     geometry.addAttribute( 'position', new THREE.BufferAttribute( positions, 3 ))
     geometry.addAttribute( 'scale', new THREE.BufferAttribute( scales, 1 ) )
+    
     const color = new THREE.Color("rgb(255,0,0)")
-    color.lerp(new THREE.Color("rgb(255,100,120)"), 0.5)
+    color.lerp(new THREE.Color("rgb(0,255,0)"), 0.5)
     
     const material = new THREE.ShaderMaterial( {
       uniforms: {
@@ -65,22 +50,22 @@ const Vis = () => {
       },
       vertexShader: vertexShader,
       fragmentShader: fragmentShader
-    } );
+    })
 
-    let particles = new THREE.Points( geometry, material );
+    let particles = new THREE.Points(geometry, material)   
     
-    const renderer = new THREE.WebGLRenderer({ antialias: true })
-    renderer.setPixelRatio( window.devicePixelRatio );
+    const renderer = new THREE.WebGLRenderer({antialias: true})
+    renderer.setPixelRatio(window.devicePixelRatio)
     scene.add(particles) 
     renderer.setSize(width, height)
 
     const renderScene = () => {
-      
       camera.position.x += ( mouseX - camera.position.x ) * .05;
       if (camera.position.y<1000) {
         camera.position.y=1000
       }
       camera.position.y += ( - (window.scrollY*10) - camera.position.y ) * .05;
+      camera.position.z += ( - (window.scrollY*10) - camera.position.z ) * .05
       camera.lookAt( scene.position );
       var positions = particles.geometry.attributes.position.array;
       var scales = particles.geometry.attributes.scale.array;
@@ -112,14 +97,12 @@ const Vis = () => {
     
     const handleMouseMove = (e) => {
       mouseX = e.clientX - window.innerWidth / 2
-      mouseY = e.clientY - window.innerHeight / 2
     }
     
     const handleTouchStart = (e) => {
       if (e.touches.length === 1) {
         e.preventDefault();
         mouseX = e.touches[0].pageX - window.innerWidth / 2
-        mouseY = e.touches[0].pageY - window.innerHeight / 2
       }
     }
     
@@ -127,7 +110,6 @@ const Vis = () => {
       if (e.touches.length === 1) {
         e.preventDefault();
         mouseX = e.touches[0].pageX - window.innerWidth / 2
-        mouseY = e.touches[0].pageY - window.innerHeight / 2
       }
     }   
     
@@ -175,7 +157,7 @@ const Vis = () => {
     }
   }, [isAnimating])
   
-  return <div className="vis" ref={mount} onClick={() => setAnimating(!isAnimating)} />
+  return <div className="particles" ref={mount} onClick={() => setAnimating(!isAnimating)} />
 }
 
-export default Vis
+export default Particles

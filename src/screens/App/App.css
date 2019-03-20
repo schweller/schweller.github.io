@@ -41,12 +41,16 @@ body {
   max-width: 310px;
   display: flex;
   min-height: 100vh;
-  align-items: flex-start;
+  align-items: flex-end;
   color: #ff0000;
 }
 
+.App-hero.fixed {
+  position: fixed;
+}
+
 .App-hero p {
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .App-logo {
@@ -59,7 +63,7 @@ body {
   color: #61dafb;
 }
 
-.vis {
+.particles {
   position: fixed;
   z-index: 0;
   top: 0;
