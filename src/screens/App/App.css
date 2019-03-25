@@ -46,36 +46,6 @@ body {
   font-weight: bold;
 }
 
-.App-hero {
-  position: relative;
-  z-index: 1;
-  padding: 0 20px;
-  max-width: 310px;
-  display: flex;
-  min-height: 100vh;
-  align-items: flex-end;
-  color: #ff0000;
-}
-
-.App-hero.fixed {
-  position: fixed;
-}
-
-.App-hero p {
-  font-size: 18px;
-  line-height: 32px;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
 .Hero {
   position: fixed;
   top: 0;
