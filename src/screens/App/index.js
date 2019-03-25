@@ -1,32 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import { useSpring, animated } from 'react-spring'
 import Particles from './components/Background'
-import Entry from './components/Entry'
+import PastExperience from './components/PastExperience'
+import Skillset from './components/Skillset'
 import GetInTouch from './components/Get-in-touch'
 import './App.css';
 
-const entries = [
-  {
-    position: "Senior Software Engineer",
-    company: "Fanatics",
-    from: "September 2017 - Current"
-  },
-  {
-    position: "Software Engineer",
-    company: "Avenue Code",
-    from: "June 2015 - July 2017"
-  },
-  {
-    position: "Frontend Developer",
-    company: "PSafe Tecnologia",
-    from: "September 2014 - June 2015"
-  },
-  {
-    position: "Frontend Developer",
-    company: "Infoglobo",
-    from: "February 2011 - September 2014"
-  }  
-]
+function Loading() {
+  const { dash } = useSpring({
+    from: { dash: 102 },
+    to: { dash: 0 }
+  })
+ 
+  return (
+    <animated.svg opacity=".5" height="60" width="60" strokeDasharray={100} strokeDashoffset={dash}>
+      <circle cx="30" cy="30" r="20" pathLength="100" stroke-width="5" stroke="red"/>
+    </animated.svg>
+  )
+}
 
 function App () {
   const [loading, setLoading] = useState(true)
@@ -35,16 +26,15 @@ function App () {
     opacity: loading ? 0 : 1
   })
 
-  //TODO show a loader
   useEffect(() => {
     let timer = setTimeout(() => setLoading(false), 800)
     return () => clearTimeout(timer)
   }, [])
 
   return loading ?
-      <div className="loader">Loading</div> :
+      <div className="loader"><Loading/></div> :
       <animated.div className="App" style={{opacity: opacity.interpolate(o => 0 + o) }}>
-        {/* <Particles /> */}
+        <Particles />
         <div className="Hero">
           <div className="Row">
             <div className="Hero-intro Column">
@@ -67,12 +57,10 @@ function App () {
           </div>
         </div>
         <div className="Scroll">
-          <h3 className="roboto-mono light">work experience></h3>
-          {entries.map((entry, key) => {
-            return <Entry key={key} entry={entry}/>
-          })}
+          <Skillset />
+          <PastExperience/>
           <div className="Footer">
-            <p className="roboto-mono light">Made by yours truly. © 2019</p>
+            <p className="roboto-mono light">Made with React, ThreeJS and React-Spring by yours truly. © 2019</p>
           </div>
         </div>
       </animated.div>

@@ -16,6 +16,10 @@ const links = [
   {
     href: `https://www.linkedin.com/in/ischweller/`,
     display: `LinkedIn`
+  },
+  {
+    href: `/inacio-schweller-resume.pdf`,
+    display: `Full Resumé`
   }
 ]
 
@@ -36,6 +40,7 @@ function GetInTouchLink({link}) {
 function GetInTouch() {
   return (
     <>
+      <p>You will find me @</p>
       <ul>
         {links.map((link, key) => <GetInTouchLink key={key} link={link}/>)}
       </ul>

@@ -65,15 +65,20 @@ const Particles = () => {
     renderer.setSize(width, height)
 
     const renderScene = () => {
-      camera.position.x += ( mouseX - camera.position.x ) * .05;
+      camera.position.x += ( mouseX - camera.position.x ) * .05
+      camera.position.y += ( - (window.scrollY*10) - camera.position.y ) * .05
+      //Clamp camera's y position
       if (camera.position.y<1000) {
         camera.position.y=1000
       }
-      camera.position.y += ( - (window.scrollY*10) - camera.position.y ) * .05;
       camera.position.z += ( - (window.scrollY*10) - camera.position.z ) * .05
-      camera.lookAt( scene.position );
-      var positions = particles.geometry.attributes.position.array;
-      var scales = particles.geometry.attributes.scale.array;
+      //Clamp camera's z position
+      if (camera.position.z<-12000) {
+        camera.position.z = -12000        
+      }
+      camera.lookAt( scene.position )
+      var positions = particles.geometry.attributes.position.array
+      var scales = particles.geometry.attributes.scale.array
       var i = 0, j = 0;
       for ( var ix = 0; ix < AMOUNTX; ix ++ ) {
         for ( var iy = 0; iy < AMOUNTY; iy ++ ) {
