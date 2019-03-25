@@ -1,3 +1,11 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
   background: black;
 }
@@ -7,21 +15,25 @@ body {
 }
 
 .App {
-  text-align: center;
-  color: #000;
+  color: white;
+  margin-left: 5em;
+  margin-right: 5em;
 }
 
-.playfair {
-  font-family: 'Playfair Display', serif;
+.rubik {
+  font-family: 'Rubik Mono One', sans-serif;
 }
 
-.hero > p {
-  margin: 0;
-  color: rgb(0, 68, 255);
+.roboto-mono {
+  font-family: 'Roboto Mono';
 }
 
-.cutive-mono {
-  font-family: Cutive Mono;
+.black {
+  font-weight: 900;
+}
+
+.light {
+  font-weight: 300;
 }
 
 .align-left {
@@ -51,6 +63,7 @@ body {
 
 .App-hero p {
   font-size: 18px;
+  line-height: 32px;
 }
 
 .App-logo {
@@ -63,7 +76,109 @@ body {
   color: #61dafb;
 }
 
-.particles {
+.Hero {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100vh;
+  margin-top: 0;
+  padding-left: 5rem;
+  padding-bottom: 5rem;
+  color: #b12b2b;
+}
+
+.Hero > .Row {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  margin: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.Hero > .Row > .Column {
+  -webkit-box-flex: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.Hero .Hero-intro {
+  margin-top: 33vh;
+}
+
+.Hero-intro p {
+  margin-top: 0;
+}
+
+.Hero a {
+  font-weight: 500;
+  text-decoration: none;
+  color: #b12b2b;
+}
+
+.Hero-intro a {
+  font-style: italic;
+}
+
+.underline-wave {
+  background: linear-gradient(to bottom, #fff 0%, #fff 100%);
+	background-position: 0 100%;
+	background-repeat: repeat-x;
+	background-size: 3px 1px;
+}
+
+.underline-wave:hover {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .75s cubic-bezier(.03,.94,.95,.09) infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23ffffff' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+  background-position: 0 100%;
+  background-size: auto 2px;
+  background-repeat: repeat-x;
+  text-decoration: none;
+}
+
+.Scroll {
+  position: relative;
+  margin-left: 50%;
+  margin-top: 33vh;
+}
+
+.Scroll > h3 {
+  text-transform: uppercase;
+  letter-spacing: .3em;
+  font-size: 14px;
+}
+
+.Scroll > .Entry > h4 {
+  font-size: 50px;
+  color: #860404;
+  opacity: 0.5;
+  margin-bottom: .2em;
+}
+
+.Scroll .Entry-from > h5 {
+  margin: 0;
+  font-style: italic;
+}
+
+.Scroll > .Footer {
+  margin-top: 6.66666667rem;
+  font-size: .8rem;
+}
+
+.Scroll > .Footer > p {
+  margin: 2rem 0;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.Particles {
   position: fixed;
   z-index: 0;
   top: 0;
