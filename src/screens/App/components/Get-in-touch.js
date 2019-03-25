@@ -44,7 +44,7 @@ function GetInTouch() {
       <ul>
         {links.map((link, key) => <GetInTouchLink key={key} link={link}/>)}
       </ul>
-      What's next? <a className="underline-wave" href="mailto:iscmendonca@gmail.com">Say hello</a>! 
+      What's next? Say <a className="underline-wave" href="mailto:hi@inacio.dev">hi@inacio.dev</a>! 
     </>
   )
 }
