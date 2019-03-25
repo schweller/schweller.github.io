@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useSpring, animated } from 'react-spring'
 import Particles from './components/Background'
 import Entry from './components/Entry'
+import GetInTouch from './components/Get-in-touch'
 import './App.css';
 
 const entries = [
@@ -43,7 +44,7 @@ function App () {
   return loading ?
       <div className="loader">Loading</div> :
       <animated.div className="App" style={{opacity: opacity.interpolate(o => 0 + o) }}>
-        <Particles />
+        {/* <Particles /> */}
         <div className="Hero">
           <div className="Row">
             <div className="Hero-intro Column">
@@ -61,11 +62,7 @@ function App () {
               </div>       
             </div>
             <div className="Hero-contact Column">
-              <p>Get in touch</p>
-              <ul>
-                <li>iscmendonca@gmail.com</li>
-                <li></li>
-              </ul>
+              <GetInTouch />
             </div>
           </div>
         </div>

@@ -108,6 +108,7 @@ body {
   flex-grow: 0;
   padding-left: 0;
   padding-right: 0;
+  flex: 1;
 }
 
 .Hero .Hero-intro {
@@ -126,6 +127,24 @@ body {
 
 .Hero-intro a {
   font-style: italic;
+}
+
+.Hero-contact > div .svg {
+  width: 20px;
+}
+
+.Hero-contact > div svg{
+  fill: red;
+  fill-opacity: .5;
+}
+
+.Hero-contact > ul {
+  list-style: none;
+  padding: 0;
+}
+
+.Hero-contact > ul > li {
+  margin: .8em 0;
 }
 
 .underline-wave {
