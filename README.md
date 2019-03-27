@@ -1,68 +1,193 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">
+    <img alt="Lumen" title="Lumen" src="https://github.com/alxshelepenok/gatsby-starter-lumen/blob/gatsby-v2/.github/logo.png" width="140"> </br>
+    Lumen
+</h1>
 
-## Available Scripts
+<h4 align="center">
+  A minimal, lightweight and mobile-first starter for creating blogs uses <a href="https://github.com/gatsbyjs/gatsby" target="_blank">Gatsby</a>.
+</h4>
 
-In the project directory, you can run:
+<p align="center">
+    <a target="_blank" href="https://circleci.com/gh/alxshelepenok/gatsby-starter-lumen"><img src="https://circleci.com/gh/alxshelepenok/gatsby-starter-lumen.svg?style=svg"></a> <a href="https://discord.gg/Bx2dezQ"><img src="https://img.shields.io/discord/556731785640280065.svg?color=%237289da&label=discord&style=popout"></a> <a target="_blank" href="https://codecov.io/gh/alxshelepenok/gatsby-starter-lumen"><img src="https://codecov.io/gh/alxshelepenok/gatsby-starter-lumen/branch/master/graph/badge.svg"></a> <a target="_blank" href="https://www.codacy.com/app/alxshelepenok/gatsby-starter-lumen?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=alxshelepenok/gatsby-starter-lumen&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/f7e27bb3a28a46a6b13453a02801c5c9"></a> <a target="_blank" href="https://codeclimate.com/github/alxshelepenok/gatsby-starter-lumen"><img src="https://img.shields.io/codeclimate/maintainability/alxshelepenok/gatsby-starter-lumen.svg"></a> <a href="https://app.fossa.io/projects/git%2Bgithub.com%2Falxshelepenok%2Fgatsby-starter-lumen?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2Falxshelepenok%2Fgatsby-starter-lumen.svg?type=shield"/></a>
+</p>
 
-### `npm start`
+## Table of contents
++ [Features](http://github.com/alxshelepenok/gatsby-starter-lumen#features)
++ [Quick Start](http://github.com/alxshelepenok/gatsby-starter-lumen#quick-start)
++ [Deploy with Netlify](http://github.com/alxshelepenok/gatsby-starter-lumen#deploy-with-netlify)
++ [Folder Structure](http://github.com/alxshelepenok/gatsby-starter-lumen#folder-structure)
++ [Related](http://github.com/alxshelepenok/gatsby-starter-lumen#related)
++ [Contributors](http://github.com/alxshelepenok/gatsby-starter-lumen#contributors)
++ [Backers](http://github.com/alxshelepenok/gatsby-starter-lumen#backers)
++ [Sponsors](http://github.com/alxshelepenok/gatsby-starter-lumen#sponsors)
++ [Credits](http://github.com/alxshelepenok/gatsby-starter-lumen#credits)
++ [License](http://github.com/alxshelepenok/gatsby-starter-lumen#license)
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Features
++ [Lost Grid](http://lostgrid.org).
++ [Modern font stack](https://bitsofco.de/the-new-system-font-stack).
++ Beautiful typography inspired by [matejlatin/Gutenberg](https://github.com/matejlatin/Gutenberg).
++ Syntax highlighting in code blocks using [PrismJS](http://prismjs.com).
++ [Mobile-First](https://medium.com/@mrmrs_/mobile-first-css-48bc4cc3f60f) approach in development.
++ Archive organized by tags and categories.
++ Pagination support.
++ [Netlify CMS](https://www.netlifycms.org) support.
++ Google Analytics.
++ Disqus Comments.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Quick Start
 
-### `npm test`
+#### Create a Gatsby site
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Use the Gatsby CLI to create a new site, specifying the Lumen starter.
 
-### `npm run build`
+```sh
+# Create a new Gatsby site using the Lumen starter
+gatsby new blog https://github.com/alxshelepenok/gatsby-starter-lumen
+```
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Start Developing
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+Navigate into your new site’s directory and start it up.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```sh
+cd blog
+gatsby develop
+```
 
-### `npm run eject`
+#### Open the source code and start editing!
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Your site is now running at `http://localhost:8000`!
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Note: You'll also see a second link: `http://localhost:8000/___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql).
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Open the `blog` directory in your code editor of choice and edit `src/templates/index-template.js`. Save your changes and the browser will update in real time!
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Deploy with Netlify
 
-## Learn More
+[Netlify](https://netlify.com) CMS can run in any frontend web environment, but the quickest way to try it out is by running it on a pre-configured starter site with Netlify. Use the button below to build and deploy your own copy of the repository:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<a href="https://app.netlify.com/start/deploy?repository=https://github.com/alxshelepenok/gatsby-starter-lumen" target="_blank"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+After clicking that button, you’ll authenticate with GitHub and choose a repository name. Netlify will then automatically create a repository in your GitHub account with a copy of the files from the template. Next, it will build and deploy the new site on Netlify, bringing you to the site dashboard when the build is complete. Next, you’ll need to set up Netlify’s Identity service to authorize users to log in to the CMS.
 
-### Code Splitting
+#### Access Locally
+```
+$ git clone https://github.com/[GITHUB_USERNAME]/[REPO_NAME].git
+$ cd [REPO_NAME]
+$ yarn
+$ npm run develop
+```
+To test the CMS locally, you'll need run a production build of the site:
+```
+$ npm run build
+$ npm run serve
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Folder Structure
 
-### Analyzing the Bundle Size
+```
+└── content
+    ├── pages
+    └── posts
+└── static
+    ├── admin
+    └── media
+└── src
+    ├── assets
+    │   └── scss
+    │       ├── base
+    │       └── mixins
+    ├── cms
+    │   └── preview-templates
+    ├── components
+    │   ├── Feed
+    │   ├── Icon
+    │   ├── Layout
+    │   ├── Page
+    │   ├── Pagination
+    │   ├── Post
+    │   │   ├── Author
+    │   │   ├── Comments
+    │   │   ├── Content
+    │   │   ├── Meta
+    │   │   └── Tags
+    │   └── Sidebar
+    │       ├── Author
+    │       ├── Contacts
+    │       ├── Copyright
+    │       └── Menu
+    ├── constants
+    ├── templates
+    └── utils
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+```
 
-### Making a Progressive Web App
+## Related
+[Statinamic port](https://github.com/thangngoc89/statinamic-theme-lumen) by [Khoa Nguyen](https://github.com/thangngoc89)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## Contributors
+Thanks goes to these wonderful people!
 
-### Advanced Configuration
+[<img alt="abisz" src="https://avatars3.githubusercontent.com/u/7287780?v=4&s=117" width="117">](https://github.com/abisz) |[<img alt="mariolopjr" src="https://avatars3.githubusercontent.com/u/2067324?v=4&s=117" width="117">](https://github.com/mariolopjr) |[<img alt="ihororlovskyi" src="https://avatars3.githubusercontent.com/u/7969737?v=4&s=117" width="117">](https://github.com/ihororlovskyi) |[<img alt="timbroder" src="https://avatars2.githubusercontent.com/u/121503?v=4&s=117" width="117">](https://github.com/timbroder) |[<img alt="vzhou842" src="https://avatars3.githubusercontent.com/u/10209814?v=4&s=117" width="117">](https://github.com/vzhou842) |[<img alt="yodahuang" src="https://avatars2.githubusercontent.com/u/11242657?v=4&s=117" width="117">](https://github.com/yodahuang) |
+:---: |:---: |:---: |:---: |:---: |:---: |
+[abisz](https://github.com/abisz) |[mariolopjr](https://github.com/mariolopjr) |[ihororlovskyi](https://github.com/ihororlovskyi) |[timbroder](https://github.com/timbroder) |[vzhou842](https://github.com/vzhou842) |[yodahuang](https://github.com/yodahuang) |
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+[<img alt="vinnymac" src="https://avatars0.githubusercontent.com/u/1832781?v=4&s=117" width="117">](https://github.com/vinnymac) |[<img alt="axelclark" src="https://avatars1.githubusercontent.com/u/16856928?v=4&s=117" width="117">](https://github.com/axelclark) |[<img alt="BigTony666" src="https://avatars2.githubusercontent.com/u/29159357?v=4&s=117" width="117">](https://github.com/BigTony666) |[<img alt="ybbarng" src="https://avatars2.githubusercontent.com/u/1793950?v=4&s=117" width="117">](https://github.com/ybbarng) |[<img alt="marktani" src="https://avatars1.githubusercontent.com/u/1780597?v=4&s=117" width="117">](https://github.com/marktani) |[<img alt="concreted" src="https://avatars2.githubusercontent.com/u/4016897?v=4&s=117" width="117">](https://github.com/concreted) |
+:---: |:---: |:---: |:---: |:---: |:---: |
+[vinnymac](https://github.com/vinnymac) |[axelclark](https://github.com/axelclark) |[BigTony666](https://github.com/BigTony666) |[ybbarng](https://github.com/ybbarng) |[marktani](https://github.com/marktani) |[concreted](https://github.com/concreted) |
 
-### Deployment
+[<img alt="chmac" src="https://avatars0.githubusercontent.com/u/690997?v=4&s=117" width="117">](https://github.com/chmac) |[<img alt="charandas" src="https://avatars2.githubusercontent.com/u/542168?v=4&s=117" width="117">](https://github.com/charandas) |[<img alt="marcelabomfim" src="https://avatars0.githubusercontent.com/u/6224547?v=4&s=117" width="117">](https://github.com/marcelabomfim) |[<img alt="zollillo" src="https://avatars3.githubusercontent.com/u/8833904?v=4&s=117" width="117">](https://github.com/zollillo) |[<img alt="codejet" src="https://avatars3.githubusercontent.com/u/802203?v=4&s=117" width="117">](https://github.com/codejet) |[<img alt="reed-jones" src="https://avatars0.githubusercontent.com/u/11511864?v=4&s=117" width="117">](https://github.com/reed-jones) |
+:---: |:---: |:---: |:---: |:---: |:---: |
+[chmac](https://github.com/chmac) |[charandas](https://github.com/charandas) |[marcelabomfim](https://github.com/marcelabomfim) |[zollillo](https://github.com/zollillo) |[codejet](https://github.com/codejet) |[reed-jones](https://github.com/reed-jones) |
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+[<img alt="swapnilmishra" src="https://avatars2.githubusercontent.com/u/875450?v=4&s=117" width="117">](https://github.com/swapnilmishra) |[<img alt="vvasiloud" src="https://avatars1.githubusercontent.com/u/5891530?v=4&s=117" width="117">](https://github.com/vvasiloud) |[<img alt="wichopy" src="https://avatars2.githubusercontent.com/u/24414632?v=4&s=117" width="117">](https://github.com/wichopy) |
+:---: |:---: |:---: |
+[swapnilmishra](https://github.com/swapnilmishra) |[vvasiloud](https://github.com/vvasiloud) |[wichopy](https://github.com/wichopy) |
 
-### `npm run build` fails to minify
+## Backers [![Backers on Open Collective](https://opencollective.com/lumen/backers/badge.svg)](#backers)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Thank you to all our backers!
+
+<a href="https://opencollective.com/lumen#backers" target="_blank"><img src="https://opencollective.com/lumen/backers.svg?width=890"></a>
+
+## Sponsors [![Sponsors on Open Collective](https://opencollective.com/lumen/sponsors/badge.svg)](#sponsors)
+
+Support this project by becoming a sponsor. Your logo will show up here with a link to your website.
+
+<a href="https://opencollective.com/lumen/sponsor/0/website" target="_blank"><img src="https://opencollective.com/lumen/sponsor/0/avatar.svg"></a>
+<a href="https://opencollective.com/lumen/sponsor/1/website" target="_blank"><img src="https://opencollective.com/lumen/sponsor/1/avatar.svg"></a>
+<a href="https://opencollective.com/lumen/sponsor/2/website" target="_blank"><img src="https://opencollective.com/lumen/sponsor/2/avatar.svg"></a>
+<a href="https://opencollective.com/lumen/sponsor/3/website" target="_blank"><img src="https://opencollective.com/lumen/sponsor/3/avatar.svg"></a>
+<a href="https://opencollective.com/lumen/sponsor/4/website" target="_blank"><img src="https://opencollective.com/lumen/sponsor/4/avatar.svg"></a>
+<a href="https://opencollective.com/lumen/sponsor/5/website" target="_blank"><img src="https://opencollective.com/lumen/sponsor/5/avatar.svg"></a>
+<a href="https://opencollective.com/lumen/sponsor/6/website" target="_blank"><img src="https://opencollective.com/lumen/sponsor/6/avatar.svg"></a>
+<a href="https://opencollective.com/lumen/sponsor/7/website" target="_blank"><img src="https://opencollective.com/lumen/sponsor/7/avatar.svg"></a>
+<a href="https://opencollective.com/lumen/sponsor/8/website" target="_blank"><img src="https://opencollective.com/lumen/sponsor/8/avatar.svg"></a>
+<a href="https://opencollective.com/lumen/sponsor/9/website" target="_blank"><img src="https://opencollective.com/lumen/sponsor/9/avatar.svg"></a>
+
+## Credits
+Nature graphic by [Anna Bearne](https://www.behance.net/annabearne) from [Noun Project](https://thenounproject.com/) is licensed under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/us/legalcode).
+
+## License
+The MIT License (MIT)
+
+Copyright (c) 2016-2019 Alexander Shelepenok
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

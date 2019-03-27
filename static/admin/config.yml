@@ -1,7 +1,6 @@
 backend:
   name: git-gateway
   branch: gatsby-source
-  repo: schweller/schweller.github.io/app
 
 media_folder: "static/media"
 public_folder: "/media"

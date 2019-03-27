@@ -1,0 +1,35 @@
+{
+  "name": "schweller",
+  "homepage": "https://schweller.github.io/",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "gh-pages": "^2.0.1",
+    "node-sass": "^4.11.0",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-pose": "^4.0.8",
+    "react-pose-text": "^3.1.0",
+    "react-scripts": "2.1.8",
+    "react-spring": "^8.0.17",
+    "simple-icons": "^1.9.24",
+    "three": "^0.102.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build -b master"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
