@@ -1,0 +1,36 @@
+@import '../../../assets/scss/variables';
+@import '../../../assets/scss/mixins';
+
+.contact {
+  font-size: 14px;
+  @extend %Column;
+
+  &__paragraph {
+    margin: 0 0 10px 0;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__list-item {
+    margin: 0 .8rem .8rem 0;
+    padding: 0;
+    display: inline-block;
+    &-link {
+      font-weight: 500;
+      &:hover {
+        border-bottom: 1px solid $color-title-active-link;
+      }
+    }
+  }
+
+  &__link {
+    font-weight: 500;
+    &:hover {
+      border-bottom: 1px solid $color-title-active-link;
+    }
+  }
+}

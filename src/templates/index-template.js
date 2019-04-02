@@ -8,7 +8,7 @@ import Page from '../components/Page';
 import Pagination from '../components/Pagination';
 import PastExperience from '../components/PastExperience'
 import Skillset from '../components/Skillset'
-import Contact from '../components/Contact'
+import Credits from '../components/Credits'
 import Particles from '../components/Particles'
 
 function Loading() {
@@ -56,34 +56,13 @@ const IndexTemplate = ({ data, pageContext }) => {
     <div className="loader"><Loading/></div> :
     <Layout title={pageTitle} description={siteSubtitle}>
       <animated.div className="App" style={{opacity: opacity.interpolate(o => 0 + o) }}>
-        <Particles />
-        <div className="Hero">
-          <div className="Row">
-            <div className="Hero-intro Column">
-              <div className="roboto-mono light align-left">
-                <p>Hello! I'm Inacio. I work and freelance as software engineer</p>
-                <p>I've proudly collaborated with awesome companies</p>
-                <p>4th on Alakajam, a game jam, with <a 
-                    className="underline-wave" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    href="https://thesunda.itch.io/cast-die-repeat">
-                    Cast Die Repeat
-                  </a>
-                </p>
-              </div>       
-            </div>
-            <div className="Hero-contact Column">
-              <Contact />
-            </div>
-          </div>
-        </div>
+        {/* <Particles /> */}
+        <Sidebar />
         <div className="Scroll">
-          <Skillset />
-          <PastExperience/>
-          <div className="Footer">
-            <p className="roboto-mono light">Made with React, ThreeJS and React-Spring by yours truly. © 2019</p>
-          </div>
+          <Feed edges={edges} />
+          {/* <Skillset />
+          <PastExperience/> */}
+          <Credits />
         </div>
       </animated.div>
       {/* <Sidebar isIndex />

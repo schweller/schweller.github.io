@@ -1,6 +1,7 @@
 import React from 'react';
 import * as THREE from 'three'
 import { vertexShader, fragmentShader } from './shaders'
+import styles from './Particles.module.scss'
 
 const generateParticlesPositionScale = (gap, x, y) => {
   const totalParticles = x * y
@@ -167,7 +168,7 @@ const Particles = () => {
     }
   }, [isAnimating])
   
-  return <div className="Particles" ref={mount} onClick={() => setAnimating(!isAnimating)} />
+  return <div className={styles['particles']} ref={mount} onClick={() => setAnimating(!isAnimating)} />
 }
 
 export default Particles

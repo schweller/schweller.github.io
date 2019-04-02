@@ -5,58 +5,74 @@ import Contacts from './Contacts';
 import Copyright from './Copyright';
 import Menu from './Menu';
 import styles from './Sidebar.module.scss';
+import Social from './Social'
 
-export const PureSidebar = ({ data, isIndex }) => {
-  const {
-    author,
-    copyright,
-    menu
-  } = data.site.siteMetadata;
+// export const PureSidebar = ({ data, isIndex }) => {
+//   const {
+//     author,
+//     copyright,
+//     menu
+//   } = data.site.siteMetadata;
 
+//   return (
+//     <div className={styles['sidebar']}>
+//       <div className={styles['sidebar__inner']}>
+//         <Author author={author} isIndex={isIndex} />
+//         <Menu menu={menu} />
+//         <Contacts contacts={author.contacts} />
+//         <Copyright copyright={copyright} />
+//       </div>
+//     </div>
+//   );
+// };
+
+// export const Sidebar = (props) => (
+//   <StaticQuery
+//     query={graphql`
+//       query SidebarQuery {
+//         site {
+//           siteMetadata {
+//             title
+//             subtitle
+//             copyright
+//             menu {
+//               label
+//               path
+//             }
+//             author {
+//               name
+//               photo
+//               bio
+//               contacts {       
+//                 twitter
+//                 telegram
+//                 github
+//                 email
+//                 rss
+//                 vkontakte
+//               }
+//             }
+//           }
+//         }
+//       }
+//     `}
+//     render={(data) => <PureSidebar {...props} data={data}/>}
+//   />
+// );
+
+const Sidebar = () => {
   return (
-    <div className={styles['sidebar']}>
-      <div className={styles['sidebar__inner']}>
-        <Author author={author} isIndex={isIndex} />
-        <Menu menu={menu} />
-        <Contacts contacts={author.contacts} />
-        <Copyright copyright={copyright} />
+    <div className={styles['hero']}>
+      <div className={styles['hero__row']}>
+        <div className={styles['hero__intro']}>
+          <div className="roboto-mono light align-left">
+            <p>Hello! I'm Inacio. I work and freelance as software engineer.</p>
+          </div>       
+        </div>
+        <Social />
       </div>
     </div>
-  );
-};
-
-export const Sidebar = (props) => (
-  <StaticQuery
-    query={graphql`
-      query SidebarQuery {
-        site {
-          siteMetadata {
-            title
-            subtitle
-            copyright
-            menu {
-              label
-              path
-            }
-            author {
-              name
-              photo
-              bio
-              contacts {       
-                twitter
-                telegram
-                github
-                email
-                rss
-                vkontakte
-              }
-            }
-          }
-        }
-      }
-    `}
-    render={(data) => <PureSidebar {...props} data={data}/>}
-  />
-);
-
+  )
+}
+ 
 export default Sidebar;

@@ -10,18 +10,22 @@
     }
 
     &-title {
-      font-size: $typographic-base-font-size * 1.6875;
+      font-family: $typographic-title-font-family;
+      font-size: $typographic-title-font-size;
+      // font-size: $typographic-base-font-size * 1.6875;
+      letter-spacing: .2rem;
       @include line-height(1.5);
       @include margin-top(0);
       @include margin-bottom(.5);
 
       &-link {
-        color: $color-base;
+        color: $color-title-inactive-link;
 
         &:hover,
         &:focus {
-          color: $color-base;
-          border-bottom: 1px solid $color-base;
+          color: $color-title-active-link;
+          opacity: .85;
+          border-bottom: 1px solid $color-title-active-link;
         }
 
       }
