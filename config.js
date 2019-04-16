@@ -7,7 +7,7 @@ module.exports = {
   copyright: '© All rights reserved.',
   disqusShortname: '',
   postsPerPage: 4,
-  googleAnalyticsId: 'UA-73379983-2',
+  googleAnalyticsId: 'UA-137719702-1',
   menu: [
     {
       label: 'Articles',
@@ -23,7 +23,7 @@ module.exports = {
     }
   ],
   author: {
-    name: 'John Doe',
+    name: 'Inácio Schweller',
     photo: '/photo.jpg',
     bio: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
     contacts: {
