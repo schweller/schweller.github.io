@@ -4,8 +4,13 @@ import Entry from './Entry'
 const entries = [
   {
     position: "Senior Software Engineer",
+    company: "Sonia",
+    from: "March 2019 - Current"
+  },
+  {
+    position: "Senior Software Engineer",
     company: "Fanatics",
-    from: "September 2017 - Current"
+    from: "September 2017 - March 2019"
   },
   {
     position: "Software Engineer",

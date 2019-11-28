@@ -40,15 +40,7 @@ function App () {
             <div className="Hero-intro Column">
               <div className="roboto-mono light align-left">
                 <p>Hello! I'm Inacio. I work and freelance as software engineer</p>
-                <p>I've proudly collaborated with awesome companies</p>
-                <p>4th on Alakajam, a game jam, with <a 
-                    className="underline-wave" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    href="https://thesunda.itch.io/cast-die-repeat">
-                    Cast Die Repeat
-                  </a>
-                </p>
+                <p>I've proudly collaborated with awesome companies.</p>
               </div>       
             </div>
             <div className="Hero-contact Column">
