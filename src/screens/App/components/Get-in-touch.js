@@ -18,6 +18,10 @@ const links = [
     display: `LinkedIn`
   },
   {
+    href: `https://stackoverflow.com/users/4957796/inacio-schweller`,
+    display: `Stack Overflow`
+  },
+  {
     href: `/inacio-schweller-resume.pdf`,
     display: `Full Resumé`
   }

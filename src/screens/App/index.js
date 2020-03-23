@@ -4,20 +4,8 @@ import Particles from './components/Background'
 import PastExperience from './components/PastExperience'
 import Skillset from './components/Skillset'
 import GetInTouch from './components/Get-in-touch'
+import Loader from './components/Loader'
 import './App.css';
-
-function Loading() {
-  const { dash } = useSpring({
-    from: { dash: 102 },
-    to: { dash: 0 }
-  })
- 
-  return (
-    <animated.svg opacity=".5" height="60" width="60" strokeDasharray={100} strokeDashoffset={dash}>
-      <circle cx="30" cy="30" r="20" pathLength="100" stroke-width="5" stroke="red"/>
-    </animated.svg>
-  )
-}
 
 function App () {
   const [loading, setLoading] = useState(true)
@@ -32,7 +20,7 @@ function App () {
   }, [])
 
   return loading ?
-      <div className="loader"><Loading/></div> :
+      <div className="loader"><Loader/></div> :
       <animated.div className="App" style={{opacity: opacity.interpolate(o => 0 + o) }}>
         <Particles />
         <div className="Hero">

@@ -5,12 +5,12 @@ const entries = [
   {
     position: "Senior Software Engineer",
     company: "Sonia",
-    from: "March 2019 - Current"
+    from: "June 2019 - Current"
   },
   {
     position: "Senior Software Engineer",
     company: "Fanatics",
-    from: "September 2017 - March 2019"
+    from: "September 2017 - April 2019"
   },
   {
     position: "Software Engineer",
