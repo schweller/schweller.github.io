@@ -35,6 +35,8 @@ const Particles = () => {
     let frameId
 
     const scene = new THREE.Scene()
+    scene.background = new THREE.Color("rgb(255,255,255")
+
     const camera = new THREE.PerspectiveCamera(75, width / height, 1, 10000)
     camera.position.y = 1000
     camera.position.z = 100
@@ -46,8 +48,8 @@ const Particles = () => {
     geometry.addAttribute( 'position', new THREE.BufferAttribute( positions, 3 ))
     geometry.addAttribute( 'scale', new THREE.BufferAttribute( scales, 1 ) )
     
-    const color = new THREE.Color("rgb(255,0,0)")
-    color.lerp(new THREE.Color("rgb(0,255,0)"), 0.5)
+    const color = new THREE.Color("rgb(0,0,0)")
+    color.lerp(new THREE.Color("rgb(0,0,0)"), 0.5)
     
     const material = new THREE.ShaderMaterial( {
       uniforms: {
@@ -61,7 +63,7 @@ const Particles = () => {
     
     const renderer = new THREE.WebGLRenderer({antialias: true})
     renderer.setPixelRatio(window.devicePixelRatio)
-    scene.add(particles) 
+    scene.add(particles)
     renderer.setSize(width, height)
 
     const renderScene = () => {

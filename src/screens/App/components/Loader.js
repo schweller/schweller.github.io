@@ -9,7 +9,7 @@ export default function Loader() {
  
   return (
     <animated.svg opacity=".5" height="60" width="60" strokeDasharray={100} strokeDashoffset={dash}>
-      <circle cx="30" cy="30" r="20" pathLength="100" stroke-width="5" stroke="red"/>
+      <circle cx="30" cy="30" r="20" pathLength="100" stroke-width="5" fill="gray" stroke="black"/>
     </animated.svg>
   )
 }

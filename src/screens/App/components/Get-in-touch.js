@@ -6,25 +6,25 @@ const links = [
     display: `Github` 
   },
   {
+    href: `https://stackoverflow.com/users/4957796/inacio-schweller`,
+    display: `Stack Overflow`
+  },  
+  {
     href: `https://codepen.io/schweller/`,
     display: `Codepen` 
   },
   {
     href: `https://thesunda.itch.io/`,
-    display: `My games` 
+    display: `Itch.io` 
+  },  
+  {
+    href: `/inacio-schweller-resume.pdf`,
+    display: `Full Resumé`
   },
   {
     href: `https://www.linkedin.com/in/ischweller/`,
     display: `LinkedIn`
   },
-  {
-    href: `https://stackoverflow.com/users/4957796/inacio-schweller`,
-    display: `Stack Overflow`
-  },
-  {
-    href: `/inacio-schweller-resume.pdf`,
-    display: `Full Resumé`
-  }
 ]
 
 function GetInTouchLink({link}) {
