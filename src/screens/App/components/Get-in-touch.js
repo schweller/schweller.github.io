@@ -16,10 +16,6 @@ const links = [
   {
     href: `https://thesunda.itch.io/`,
     display: `Itch.io` 
-  },  
-  {
-    href: `/inacio-schweller-resume.pdf`,
-    display: `Full Resumé`
   },
   {
     href: `https://www.linkedin.com/in/ischweller/`,
