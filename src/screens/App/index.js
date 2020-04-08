@@ -62,10 +62,18 @@ const Contact = styled.div`
   align-self: end;
 `
 
-function App () {
+const Content = styled.div`
+  @media (min-width: 980px) {
+    margin-top: 0;
+    padding-left: 15rem;
+    padding-bottom: 5rem;
+  }  
+`
+
+function App ({children}) {
   const [state, setState] = useState({
     loading: true,
-    choosenTheme: 'light',
+    choosenTheme: 'dark',
   })
   
   const { loading, choosenTheme } = state
@@ -105,6 +113,9 @@ function App () {
             </Contact>
           </Row>
         </Hero>
+        <Content>
+          {children}
+        </Content>
       </ThemeProvider>
     </animated.div>
   )
