@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import * as THREE from 'three'
 import { vertexShader, fragmentShader } from '../shaders'
 
@@ -22,9 +22,8 @@ const generateParticlesPositionScale = (gap, x, y) => {
 } 
 
 const Particles = () => {
-  let count=0
-  const { useRef, useEffect, useState } = React
   const mount = useRef(null)
+  const countRef = useRef(0)
   const [isAnimating, setAnimating] = useState(true)
   const controls = useRef(null)
   
@@ -82,10 +81,10 @@ const Particles = () => {
       var i = 0, j = 0;
       for ( var ix = 0; ix < AMOUNTX; ix ++ ) {
         for ( var iy = 0; iy < AMOUNTY; iy ++ ) {
-          positions[ i + 1 ] = ( Math.sin( ( ix + count ) * 0.3 ) * 50 ) +
-            ( Math.sin( ( iy + count ) * 0.5 ) * 50 )
-          scales[ j ] = ( Math.sin( ( ix + count ) * 0.1 ) + 1 ) * 3 +
-            ( Math.sin( ( iy + count ) * 0.1 ) + 1 ) * 3
+          positions[ i + 1 ] = ( Math.sin( ( ix + countRef.current ) * 0.3 ) * 50 ) +
+            ( Math.sin( ( iy + countRef.current ) * 0.5 ) * 50 )
+          scales[ j ] = ( Math.sin( ( ix + countRef.current ) * 0.1 ) + 1 ) * 3 +
+            ( Math.sin( ( iy + countRef.current ) * 0.1 ) + 1 ) * 3
           i += 3;
           j ++;
         }
@@ -93,7 +92,7 @@ const Particles = () => {
       particles.geometry.attributes.position.needsUpdate = true;
       particles.geometry.attributes.scale.needsUpdate = true;
       renderer.render(scene, camera)
-      count+=0.05
+      countRef.current+=0.05
     }
 
     const handleResize = () => {
