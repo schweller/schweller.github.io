@@ -6,11 +6,11 @@
   "dependencies": {
     "gh-pages": "^2.0.1",
     "node-sass": "^4.13.1",
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4",
+    "react": "17.0.0",
+    "react-dom": "17.0.0",
     "react-pose": "^4.0.8",
     "react-pose-text": "^3.1.0",
-    "react-scripts": "^3.2.0",
+    "react-scripts": "4.0.0",
     "react-spring": "^8.0.17",
     "simple-icons": "^1.9.24",
     "three": "^0.102.1"
